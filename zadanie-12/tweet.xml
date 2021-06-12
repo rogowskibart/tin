@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<tweet xsi:noNamespaceSchemaLocation="tweet.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id>156</id>
+  <author>@author</author>
+  <date>2021-06-12</date>
+  <privacy>everyone</privacy>
+  <numberOfRetweets>213</numberOfRetweets>
+  <numberOfQuotes>51</numberOfQuotes>
+  <numberOfLikes>1233</numberOfLikes>
+  <length>132</length>
+</tweet>

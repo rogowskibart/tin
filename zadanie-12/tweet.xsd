@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tweet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id">
+          <xs:unique name="id_unique" >
+            <xs:selector xpath="id" />
+            <xs:field xpath="." />
+          </xs:unique>
+        </xs:element>
+        <xs:element name="author">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value='@[a-zA-Z\d_]{5,15}' />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="date" type="xs:date" />
+        <xs:element name="privacy">
+          <xs:simpleType>
+            <xs:union memberTypes="public followerList" />
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="numberOfRetweets" type="xs:integer"/>
+        <xs:element name="numberOfQuotes" type="xs:integer"/>
+        <xs:element name="numberOfLikes" type="xs:integer"/>
+        <xs:element name="length">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minExclusive value="0" />
+              <xs:maxInclusive value="140" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="followerList">
+      <xs:restriction base="xs:string">
+        <xs:pattern value='@[a-zA-Z\d_]{5,15}' />
+      </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="public">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="everyone" />
+      <xs:enumeration value="people you follow" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
