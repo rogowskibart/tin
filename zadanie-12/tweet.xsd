@@ -17,11 +17,6 @@
           </xs:simpleType>
         </xs:element>
         <xs:element name="date" type="xs:date" />
-        <xs:element name="privacy">
-          <xs:simpleType>
-            <xs:union memberTypes="public followerList" />
-          </xs:simpleType>
-        </xs:element>
         <xs:element name="numberOfRetweets" type="xs:integer"/>
         <xs:element name="numberOfQuotes" type="xs:integer"/>
         <xs:element name="numberOfLikes" type="xs:integer"/>
@@ -33,21 +28,31 @@
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
+        <xs:element name="location">
+          <xs:simpleType>
+            <xs:list>
+              <xs:simpleType>
+                <xs:union memberTypes="latitude longitude" />
+              </xs:simpleType>
+            </xs:list>
+          </xs:simpleType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
-  <xs:simpleType name="followerList">
-      <xs:restriction base="xs:string">
-        <xs:pattern value='@[a-zA-Z\d_]{5,15}' />
+  
+  <xs:simpleType name="latitude">
+      <xs:restriction base="xs:decimal">
+        <xs:maxInclusive value="90" />
+        <xs:minInclusive value="-90" />
       </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="public">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="everyone" />
-      <xs:enumeration value="people you follow" />
-    </xs:restriction>
+  <xs:simpleType name="longitude">
+    <xs:restriction base="xs:decimal">
+        <xs:maxInclusive value="180" />
+        <xs:minInclusive value="-180" />
+      </xs:restriction>
   </xs:simpleType>
 
 </xs:schema>
