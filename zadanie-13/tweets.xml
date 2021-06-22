@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="tweets.xsl" ?>
+
+<tweetsResponse>
+  <tweet>
+    <id>156</id>
+    <author>@a</author>
+    <date>2021-06-13</date>
+    <numberOfRetweets>8241</numberOfRetweets>
+    <numberOfQuotes>5993</numberOfQuotes>
+    <numberOfLikes>8499</numberOfLikes>
+    <length>24</length>
+    <location>52.2297700 21.0117800</location>
+  </tweet>
+  <tweet>
+    <id>168</id>
+    <author>@b</author>
+    <date>2021-06-17</date>
+    <numberOfRetweets>1013</numberOfRetweets>
+    <numberOfQuotes>9601</numberOfQuotes>
+    <numberOfLikes>3822</numberOfLikes>
+    <length>54</length>
+    <location>52.2297700 21.0117800</location>
+  </tweet>
+  <tweet>
+    <id>176</id>
+    <author>@c</author>
+    <date>2021-06-12</date>
+    <numberOfRetweets>4719</numberOfRetweets>
+    <numberOfQuotes>2457</numberOfQuotes>
+    <numberOfLikes>77</numberOfLikes>
+    <length>131</length>
+    <location>52.2297700 21.0117800</location>
+  </tweet>
+  <tweet>
+    <id>184</id>
+    <author>@d</author>
+    <date>2021-06-09</date>
+    <numberOfRetweets>4921</numberOfRetweets>
+    <numberOfQuotes>1537</numberOfQuotes>
+    <numberOfLikes>2164</numberOfLikes>
+    <length>132</length>
+    <location>52.2297700 21.0117800</location>
+  </tweet>
+  <tweet>
+    <id>199</id>
+    <author>@e</author>
+    <date>2021-06-02</date>
+    <numberOfRetweets>5991</numberOfRetweets>
+    <numberOfQuotes>2910</numberOfQuotes>
+    <numberOfLikes>3816</numberOfLikes>
+    <length>20</length>
+    <location>52.2297700 21.0117800</location>
+  </tweet>
+</tweetsResponse>
