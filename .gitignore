@@ -1,2 +1,5 @@
 .DS_Store
 *polecenie.md
+
+# Dependency directories
+node_modules/
